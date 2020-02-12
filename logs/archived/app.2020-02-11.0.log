@@ -1,0 +1,5 @@
+2020-02-11 22:15:09,348 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBACL67997 with PID 53016 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-11 22:15:09,352 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-11 22:15:09,353 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] The following profiles are active: events,dev,local
+2020-02-11 22:15:15,843 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Started JpaExampleApplication in 7.073 seconds (JVM running for 9.854)
+2020-02-11 22:15:38,712 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-1] Inside EmployeeController:getEmployeeById
