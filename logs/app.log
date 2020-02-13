@@ -35,3 +35,27 @@
 2020-02-12 14:26:13,010 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBACL67997 with PID 63908 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
 2020-02-12 14:26:13,010 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
 2020-02-12 14:26:13,010 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] The following profiles are active: events,dev,local
+2020-02-13 16:07:57,715 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBAML145949 with PID 8144 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-13 16:07:57,718 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-13 16:07:57,718 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-02-13 16:08:02,493 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Started JpaExampleApplication in 5.108 seconds (JVM running for 5.838)
+2020-02-13 16:13:46,240 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-1] Inside EmployeeController:getAll
+2020-02-13 16:15:09,914 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-5] Inside EmployeeController:updateEmployee
+2020-02-13 16:15:34,333 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-6] Inside EmployeeController:getAll
+2020-02-13 16:20:31,097 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBAML145949 with PID 8144 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-13 16:20:31,097 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-13 16:20:31,098 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-02-13 16:20:32,119 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Started JpaExampleApplication in 1.056 seconds (JVM running for 755.462)
+2020-02-13 16:21:20,407 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBAML145949 with PID 8144 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-13 16:21:20,408 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-13 16:21:20,408 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-02-13 16:21:21,291 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Started JpaExampleApplication in 0.907 seconds (JVM running for 804.635)
+2020-02-13 16:22:22,313 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-1] Inside EmployeeController:getAll
+2020-02-13 16:22:40,849 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBAML145949 with PID 8144 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-13 16:22:40,850 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-13 16:22:40,850 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-02-13 16:22:41,607 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Started JpaExampleApplication in 0.785 seconds (JVM running for 884.95)
+2020-02-13 16:22:42,162 DEBUG com.example.jpaexample.controller.EmployeeController [http-nio-8000-exec-1] Inside EmployeeController:getAll
+2020-02-13 16:23:09,705 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] Starting JpaExampleApplication on HIBAML145949 with PID 8144 (D:\projects\jpa-example\target\classes started by TVeeralingeg in D:\projects\jpa-example)
+2020-02-13 16:23:09,705 DEBUG com.example.jpaexample.JpaExampleApplication [restartedMain] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-13 16:23:09,705 INFO com.example.jpaexample.JpaExampleApplication [restartedMain] No active profile set, falling back to default profiles: default

@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.jpaexample.model.Employee;
 import com.example.jpaexample.repository.EmployeeRepository;
@@ -24,6 +25,7 @@ public class EmployeeService {
 		return employeeRepository.save(employee);
 	}
 	
+	@Transactional
 	public Employee updateEmployee(Employee employee) throws EmployeeNotFoundException {
 		Employee employee1= getEmployeeByID(employee.getId());
 		employee1.setAge(employee.getAge());
