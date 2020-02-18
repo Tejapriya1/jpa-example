@@ -50,6 +50,7 @@ class JpaExampleApplicationTests {
 		return list;
 	}
 
+	
 	@Test
 	public void addEmployee() {
 		Employee emp = new Employee(1, "Mike", "James", 25, "Accounts");
@@ -61,6 +62,7 @@ class JpaExampleApplicationTests {
 
 	}
 
+	
 	@Test
 	public void deleteEmployee() {
 		Employee emp = new Employee(1, "Mike", "James", 25, "Accounts");
