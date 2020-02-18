@@ -47,8 +47,16 @@ public class EmployeeController {
 	@DeleteMapping("/deleteEmployee/{id}")
 	public boolean deleteEmployee(@PathVariable int id) throws EmployeeNotFoundException {
 		logger.debug("Inside EmployeeController:deleteEmployee");
+		try
+		{
 		Employee employee = employeeService.getEmployeeByID(id);
 		return employeeService.deleteEmployee(employee);
+		}
+		catch( EmployeeNotFoundException e)
+		{
+			throw new EmployeeNotFoundException(" not found");
+		}
+		
 	}
 
 	@GetMapping("/getEmployeeById/{id}")
