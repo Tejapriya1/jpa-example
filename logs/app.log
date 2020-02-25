@@ -258,3 +258,66 @@
 2020-02-17 20:41:04,287 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
 2020-02-17 20:41:04,301 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
 2020-02-17 20:41:04,308 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 14:55:56,340 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 14236 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 14:55:56,343 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 14:55:56,344 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 14:56:03,348 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 7.34 seconds (JVM running for 9.032)
+2020-02-18 14:56:03,859 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 14:56:03,995 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 14:56:04,017 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 14:56:04,040 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 14:56:04,050 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 15:00:20,771 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 20428 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 15:00:20,775 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 15:00:20,776 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 15:00:27,989 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 7.595 seconds (JVM running for 9.416)
+2020-02-18 15:00:28,423 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 15:00:28,544 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 15:00:28,565 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 15:00:28,586 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 15:00:28,595 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 15:00:55,203 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 15992 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 15:00:55,218 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 15:00:55,220 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 15:01:02,225 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 7.666 seconds (JVM running for 9.775)
+2020-02-18 15:01:02,687 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 15:01:02,814 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 15:01:02,834 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 15:01:02,860 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 15:01:02,871 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 15:07:32,776 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 22268 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 15:07:32,783 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 15:07:32,784 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 15:07:41,104 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 8.807 seconds (JVM running for 11.381)
+2020-02-18 15:07:41,640 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 15:07:41,817 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 15:07:41,847 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 15:07:41,874 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 15:07:41,884 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 16:14:45,449 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 22932 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 16:14:45,458 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 16:14:45,459 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 16:14:51,740 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 6.675 seconds (JVM running for 8.409)
+2020-02-18 16:14:52,243 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 16:14:52,380 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 16:14:52,401 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 16:14:52,420 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 16:14:52,431 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 16:16:36,281 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 10960 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 16:16:36,285 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 16:16:36,287 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 16:16:45,685 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 9.888 seconds (JVM running for 12.887)
+2020-02-18 16:16:46,309 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 16:16:46,481 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 16:16:46,505 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 16:16:46,530 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 16:16:46,538 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
+2020-02-18 16:20:09,540 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Starting JpaExampleApplicationTests on HIBAML145920 with PID 16576 (started by UParameswara in C:\Users\uparameswara\git\jpa-example)
+2020-02-18 16:20:09,545 DEBUG com.example.jpaexample.JpaExampleApplicationTests [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-18 16:20:09,546 INFO com.example.jpaexample.JpaExampleApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-02-18 16:20:16,809 INFO com.example.jpaexample.JpaExampleApplicationTests [main] Started JpaExampleApplicationTests in 7.7 seconds (JVM running for 10.676)
+2020-02-18 16:20:17,228 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:deleteEmployee
+2020-02-18 16:20:17,372 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getEmployeeById
+2020-02-18 16:20:17,399 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:addEmployee
+2020-02-18 16:20:17,424 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:getAll
+2020-02-18 16:20:17,435 DEBUG com.example.jpaexample.controller.EmployeeController [main] Inside EmployeeController:updateEmployee
