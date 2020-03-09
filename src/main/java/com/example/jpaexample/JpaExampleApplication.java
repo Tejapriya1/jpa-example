@@ -11,7 +11,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"com.philips","com.example"})
 public class JpaExampleApplication {
 
 	public static void main(String[] args) {

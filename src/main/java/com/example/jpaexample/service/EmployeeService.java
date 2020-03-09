@@ -29,7 +29,7 @@ public class EmployeeService {
 	public Employee updateEmployee(Employee employee) throws EmployeeNotFoundException {
 		Employee employee1= getEmployeeByID(employee.getId());
 		employee1.setAge(employee.getAge());
-		employee1.setDepartment(employee.getDepartment());
+		//employee1.setDepartment(employee.getDepartment());
 		employee1.setFirstName(employee.getFirstName());
 		employee1.setLastName(employee.getLastName());
 		

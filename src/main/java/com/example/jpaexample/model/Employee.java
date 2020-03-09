@@ -1,11 +1,9 @@
 package com.example.jpaexample.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="Employee")
 public class Employee {
 	
 	@Id
@@ -14,8 +12,18 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private int age;
-	private String department;
-	
+	String department;
+	@OneToOne(mappedBy = "empl", cascade=CascadeType.ALL)
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -40,19 +48,17 @@ public class Employee {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getDepartment() {
-		return department;
-	}
-	public void setDepartment(String department) {
-		this.department = department;
-	}
-	public Employee(int id, String firstName, String lastName, int age, String department) {
+
+
+
+	public Employee(int id, String firstName, String lastName, int age, String department,Address address) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-		this.department = department;
+		this.department=department;
+		this.address=address;
 	}
 	public Employee() {
 		super();

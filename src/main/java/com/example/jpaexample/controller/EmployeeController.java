@@ -5,14 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.jpaexample.model.Employee;
 import com.example.jpaexample.service.EmployeeService;
@@ -20,11 +13,15 @@ import com.example.jpaexample.userdefinedexception.EmployeeNotFoundException;
 
 @RestController
 @CrossOrigin
+@RequestMapping(value = "/jpa/")
 public class EmployeeController {
 	
 	Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 	@Autowired
 	private EmployeeService employeeService;
+
+	@Autowired
+	ClientApplication clientApplication;
 
 	@GetMapping("/getall")
 	public List<Employee> getAll() {
@@ -63,5 +60,11 @@ public class EmployeeController {
 	public Employee getEmployeeById(@PathVariable int id) throws EmployeeNotFoundException {
 		logger.debug("Inside EmployeeController:getEmployeeById");
 		return employeeService.getEmployeeByID(id);
+	}
+
+	@GetMapping("/getResponseFromWeb/")
+	public String getWebResponse(){
+		System.out.println("In get Web result");
+		return clientApplication.sendRequestToWeb();
 	}
 }
