@@ -1,46 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+	<property name="COMPONENT_NAME" scope="context"
+		value="Bootstrap" />
+	<property name="IOTHUB_INSTALL_PATH_ENV" value="${user.dir}" />
+	<property name="LOG_FILE_BASE_PATH" value="${user.dir}" />
+	<property name="APP_NAME" value="JPA Example" />
 
-	<property name="HOME_LOG" value="logs/app.log" />
-	<appender name="CONSOLE"
-		class="ch.qos.logback.core.ConsoleAppender">
-		<layout class="ch.qos.logback.classic.PatternLayout">
-			<Pattern>
-				%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
-			</Pattern>
-		</layout>
-	</appender>
-
-	<appender name="FILE-ROLLING"
+	<appender name="IOTHUBLOGGER"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${HOME_LOG}</file>
-
+		<file>${LOG_FILE_BASE_PATH}/logs/JPAExample.log</file>
 		<rollingPolicy
-			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILE_BASE_PATH}/logs/JPAExample.%d{yyyy-MM-dd}.%i.log
 			</fileNamePattern>
-			<!-- each archived file, size max 10MB -->
-			<maxFileSize>10MB</maxFileSize>
-			<!-- total size of all archive files, if total size > 20GB, it will delete 
-				old archived file -->
-			<totalSizeCap>20GB</totalSizeCap>
-			<!-- 60 days to keep -->
-			<maxHistory>60</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="com.philips.services.iot.logger.loggerpolicy.StartupSizeAndTimeBasedFNATP">
+				<!-- Size of single log file -->
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
-
 		<encoder>
 			<pattern>%d %p %c{1.} [%t] %m%n</pattern>
 		</encoder>
+
 	</appender>
 
-	<logger name="com.example" level="debug" additivity="false">
-		<appender-ref ref="FILE-ROLLING" />
-		<appender-ref ref="CONSOLE" />
+	<logger name="org.springframework" level="warn"
+		additivity="false">
+		<appender-ref ref="IOTHUBLOGGER" />
 	</logger>
 
-	<root level="error">
-		<appender-ref ref="FILE-ROLLING" />
-		<appender-ref ref="CONSOLE" />
-	</root>
+	<logger name="org.apache.http" level="warn" additivity="false">
+		<appender-ref ref="IOTHUBLOGGER" />
+	</logger>
 
+	<logger name="groovyx.net.http" level="warn" additivity="false">
+		<appender-ref ref="IOTHUBLOGGER" />
+	</logger>
+
+	<root name="iothublogger" level="info">
+		<appender-ref ref="IOTHUBLOGGER" />
+	</root>
 </configuration>

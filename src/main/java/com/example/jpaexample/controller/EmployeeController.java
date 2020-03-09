@@ -2,8 +2,6 @@ package com.example.jpaexample.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,36 +15,38 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.jpaexample.model.Employee;
 import com.example.jpaexample.service.EmployeeService;
 import com.example.jpaexample.userdefinedexception.EmployeeNotFoundException;
+import com.philips.services.iot.logger.Logger;
+import com.philips.services.iot.logger.models.LogParamBuilder;
+
 
 @RestController
 @CrossOrigin
 public class EmployeeController {
 	
-	Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 	@Autowired
 	private EmployeeService employeeService;
 
 	@GetMapping("/getall")
 	public List<Employee> getAll() {
-		logger.debug("Inside EmployeeController:getAll");
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
 		return employeeService.getAllEmployees();
 	}
 
 	@PostMapping("/addEmployee")
 	public Employee addEmployee(@RequestBody Employee employee) {
-		logger.debug("Inside EmployeeController:addEmployee");
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
 		return employeeService.addEmployee(employee);
 	}
 	
 	@PutMapping("/updateEmployee")
 	public Employee updateEmployee(@RequestBody Employee employee) throws EmployeeNotFoundException {
-		logger.debug("Inside EmployeeController:updateEmployee");
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
 		return employeeService.updateEmployee(employee);
 	}
 
 	@DeleteMapping("/deleteEmployee/{id}")
 	public boolean deleteEmployee(@PathVariable int id) throws EmployeeNotFoundException {
-		logger.debug("Inside EmployeeController:deleteEmployee");
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
 		try
 		{
 		Employee employee = employeeService.getEmployeeByID(id);
@@ -61,7 +61,15 @@ public class EmployeeController {
 
 	@GetMapping("/getEmployeeById/{id}")
 	public Employee getEmployeeById(@PathVariable int id) throws EmployeeNotFoundException {
-		logger.debug("Inside EmployeeController:getEmployeeById");
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
 		return employeeService.getEmployeeByID(id);
+	}
+	
+	@GetMapping("/testApi")
+	public String testAPI()  {
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
+		Logger.traceMethodExit(new LogParamBuilder().correlationId("1234").build());
+		System.out.println("inside controller");
+		return employeeService.testAPI();
 	}
 }
