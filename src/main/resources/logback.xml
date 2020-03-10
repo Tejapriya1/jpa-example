@@ -10,7 +10,7 @@
 		<file>${LOG_FILE_BASE_PATH}/logs/JPAExample.log</file>
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_FILE_BASE_PATH}/logs/JPAExample.%d{yyyy-MM-dd}.%i.log
+			<fileNamePattern>${LOG_FILE_BASE_PATH}/logs/JPAExample.%d{yyyy-MM-dd}.%i.log.zip
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="com.philips.services.iot.logger.loggerpolicy.StartupSizeAndTimeBasedFNATP">

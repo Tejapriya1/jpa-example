@@ -32,109 +32,106 @@ import com.philips.services.iothub.commoncomponents.httpabstraction.service.Http
 
 @Service
 public class EmployeeService {
-	
+
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
-	
-	  @Autowired 
-	  @Qualifier("HttpAbstractionFactoryProducerImpl")
-	  private HttpAbstractionFactoryImpl httpAbstractionFactoryImpl;
-	  
-	  @Autowired 
-	  private ProxyDetails proxyDetails;
-	  
-	  @Autowired 
-	  private Context context;
-	  
-	  @Autowired 
-	  private RequestAttributes requestAttributes;
-	  
-	  @Autowired
-	 private OperationResultBuilder operationResultBuilder;
-	 
-	
+
+	@Autowired
+	@Qualifier("HttpAbstractionFactoryProducerImpl")
+	private HttpAbstractionFactoryImpl httpAbstractionFactoryImpl;
+
+	@Autowired
+	private QueueService queueService;
+
+	@Autowired
+	private ProxyDetails proxyDetails;
+
+	@Autowired
+	private Context context;
+
+	@Autowired
+	private RequestAttributes requestAttributes;
+
+	@Autowired
+	private OperationResultBuilder operationResultBuilder;
+
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
-	
+
 	public Employee addEmployee(Employee employee) {
+		queueService.addSend(employee);
 		return employeeRepository.save(employee);
 	}
-	
+
 	@Transactional
 	public Employee updateEmployee(Employee employee) throws EmployeeNotFoundException {
-		Employee employee1= getEmployeeByID(employee.getId());
+		Employee employee1 = getEmployeeByID(employee.getId());
 		employee1.setAge(employee.getAge());
 		employee1.setDepartment(employee.getDepartment());
 		employee1.setFirstName(employee.getFirstName());
 		employee1.setLastName(employee.getLastName());
-		
+
 		return employee1;
 	}
-	
+
 	public boolean deleteEmployee(Employee employee) throws EmployeeNotFoundException {
-		
+
 		getEmployeeByID(employee.getId());
 		employeeRepository.delete(employee);
-		
+		queueService.deleteSend(employee);
 		return true;
 	}
-	
+
 	public Employee getEmployeeByID(int id) throws EmployeeNotFoundException {
-	
-		Employee employee=null;
+
+		Employee employee = null;
 		Optional<Employee> employeeOptional = employeeRepository.findById(id);
-		if(employeeOptional.isPresent()) {
+		if (employeeOptional.isPresent()) {
 			employee = employeeOptional.get();
-		}else {
-			throw new EmployeeNotFoundException("employee not found for this id:"+id);
+		} else {
+			throw new EmployeeNotFoundException("employee not found for this id:" + id);
 		}
 		return employee;
 	}
 
 	public String testAPI() {
-		
-		
-		  Logger.info(new LogParamBuilder().logType(LogType.DEVELOPER)
-		  .correlationId("1234").infoCategory(InfoCategory.INTERFACE)
-		  .description("Inside test API creating request").build());
-		  
-		  HttpAbstraction httpAbstraction =
-		  httpAbstractionFactoryImpl.getHttpAbstractionInstance();
-		  
-		  HttpRequest httpRequest = HttpRequest.newBuilder()
-		  .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
-		  .GET().build();
-		 setRequestParams();
-		  try { 
-			  HttpResponse<String> httpResponse = httpAbstraction.sendRequest(httpRequest, proxyDetails, context, requestAttributes);
-			  return((operationResultBuilder.buildOperationResult(httpResponse, context)).getHttpResponseBody());
-	
-		  } 
-		  catch (IOException | InterruptedException | TimeoutException | ExecutionException e) { 
-		Logger.error(new
-		  LogParamBuilder().logType(LogType.DEVELOPER) .correlationId("1234")
-		  .infoCategory(InfoCategory.EXCEPTION)
-		  .description("IoTHttpNetworkException in API call ").exception(e).build());
-		   
-		 
-		  }
+
+		Logger.info(new LogParamBuilder().logType(LogType.DEVELOPER).correlationId("1234")
+				.infoCategory(InfoCategory.INTERFACE).description("Inside test API creating request").build());
+
+		HttpAbstraction httpAbstraction = httpAbstractionFactoryImpl.getHttpAbstractionInstance();
+
+		HttpRequest httpRequest = HttpRequest.newBuilder()
+				.uri(URI.create("https://jsonplaceholder.typicode.com/todos/1")).GET().build();
+		setRequestParams();
+		try {
+			HttpResponse<String> httpResponse = httpAbstraction.sendRequest(httpRequest, proxyDetails, context,
+					requestAttributes);
+			return ((operationResultBuilder.buildOperationResult(httpResponse, context)).getHttpResponseBody());
+
+		} catch (IOException | InterruptedException | TimeoutException | ExecutionException e) {
+			Logger.error(new LogParamBuilder().logType(LogType.DEVELOPER).correlationId("1234")
+					.infoCategory(InfoCategory.EXCEPTION).description("IoTHttpNetworkException in API call ")
+					.exception(e).build());
+
+		}
 		return null;
-		
+
 	}
-	public void setRequestParams(){
-	    Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
-	    proxyDetails.setProxyPort("");
-	    proxyDetails.setProxyAddress("");
-	    List<Integer> httpcodesRetryList = new ArrayList<Integer>();
-	    httpcodesRetryList.add(HttpStatusCode.INTERNAL_SERVER_ERROR);
-	    requestAttributes.setHttpcodesRetryList(httpcodesRetryList);
-	    requestAttributes.setMaxNumOfRetries(3);
-	    requestAttributes.setSuccessHttpStatusCode(HttpStatusCode.SUCCESS);
-	    requestAttributes.setConnectionTimeOut("10000");
-	    context.setContextType("Fetching data");
-	    context.setSubContextType("Data from web");
-	    Logger.traceMethodExit(new LogParamBuilder().correlationId("1234").build());
+
+	public void setRequestParams() {
+		Logger.traceMethodStart(new LogParamBuilder().correlationId("1234").build());
+		proxyDetails.setProxyPort("");
+		proxyDetails.setProxyAddress("");
+		List<Integer> httpcodesRetryList = new ArrayList<Integer>();
+		httpcodesRetryList.add(HttpStatusCode.INTERNAL_SERVER_ERROR);
+		requestAttributes.setHttpcodesRetryList(httpcodesRetryList);
+		requestAttributes.setMaxNumOfRetries(3);
+		requestAttributes.setSuccessHttpStatusCode(HttpStatusCode.SUCCESS);
+		requestAttributes.setConnectionTimeOut("10000");
+		context.setContextType("Fetching data");
+		context.setSubContextType("Data from web");
+		Logger.traceMethodExit(new LogParamBuilder().correlationId("1234").build());
 	}
 }
